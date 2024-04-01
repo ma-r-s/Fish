@@ -1,12 +1,12 @@
 <script>
 	import { T, useTask } from '@threlte/core';
 	import { OrbitControls } from '@threlte/extras';
-	export let gold = 10;
+	export let cubes = 10;
 	export let miners = 10;
 	export let cubeSide = 10;
 	let rotation = 0;
 	useTask((delta) => {
-		//rotation += delta;
+		rotation += delta;
 	});
 </script>
 
@@ -20,9 +20,9 @@
 	<OrbitControls autoRotate />
 </T.PerspectiveCamera>
 <T.Group position={[-cubeSide + 1, -cubeSide + 4, -cubeSide + 1]}>
-	{#each Array(gold) as _, i}
+	{#each Array(cubes) as _, i}
 		<T.Mesh
-			rotation.y={rotation}
+			rotation.y={Math.random() + rotation}
 			position={[
 				((i % cubeSide) * 2) % cubeSide ** 2,
 				Math.floor(i / cubeSide ** 2) * 2,
