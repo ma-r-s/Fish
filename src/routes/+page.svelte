@@ -77,5 +77,5 @@
 	</div>
 	<div class="mb-4"></div>
 	<Button on:click={dimTime} disabled={timePrice > gold}>Mine Time {timePrice}$</Button>
-	Time = {time}
+	Time = {time.toFixed(3)}
 </div>
