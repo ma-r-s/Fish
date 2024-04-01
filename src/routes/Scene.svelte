@@ -22,7 +22,7 @@
 <T.Group position={[-cubeSide + 1, -cubeSide + 4, -cubeSide + 1]}>
 	{#each Array(cubes) as _, i}
 		<T.Mesh
-			rotation.y={Math.random() + rotation}
+			rotation.y={i + rotation}
 			position={[
 				((i % cubeSide) * 2) % cubeSide ** 2,
 				Math.floor(i / cubeSide ** 2) * 2,
