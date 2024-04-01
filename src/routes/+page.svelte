@@ -14,7 +14,7 @@
 	const dimTime = () => {
 		if (gold >= timePrice) {
 			gold -= timePrice;
-			time *= 0.9;
+			time *= 0.99;
 			timePrice += 10;
 		}
 	};
