@@ -2,7 +2,6 @@
 	import { T, useTask } from '@threlte/core';
 	import { OrbitControls } from '@threlte/extras';
 	export let cubes = 10;
-	export let miners = 10;
 	export let cubeSide = 10;
 	let rotation = 0;
 	useTask((delta) => {
@@ -30,6 +29,7 @@
 			]}
 		>
 			<T.BoxGeometry />
+
 			<T.MeshNormalMaterial />
 		</T.Mesh>
 	{/each}
